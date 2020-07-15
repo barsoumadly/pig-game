@@ -1,0 +1,214 @@
+/*--------------------------------*/
+/* Main Settings */
+/*--------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+body {
+    background-image: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4)), url(../images/background-image/background.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: Lato;
+    font-weight: 300;
+    position: relative;
+    height: 100vh;
+    color: white;
+}
+.wrapper {
+    width: 1000px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 10px 50px 50px rgba(0, 0, 0, 7.8);
+    overflow: hidden;
+}
+.player-0-panel,
+.player-1-panel {
+    width: 50%;
+    float: left;
+    height: 600px;
+    padding: 100px;
+}
+
+/*--------------------------------*/
+/* Players */
+/*--------------------------------*/
+.player-name {
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 100;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.player-score {
+    text-align: center;
+    font-size: 80px;
+    font-weight: 400;
+    color: #E91E63;
+    margin-bottom: 130px;
+}
+
+/*--------------------------------*/
+/* Active Style */
+/*--------------------------------*/
+.active .player-name {
+    font-weight: 300;
+}
+.active .player-name::after {
+    content: "\2022";
+    font-size: 47px;
+    position: absolute;
+    color: #E91E63;
+    top: -7px;
+    right: 10px;
+}
+
+/*--------------------------------*/
+/* Scores */
+/*--------------------------------*/
+.player0-current-box,
+.player1-current-box {
+    background-color: #E91E63;
+    color: #fff;
+    width: 40%;
+    margin: 0 auto;
+    padding: 12px;
+    text-align: center;
+}
+.player-current-label {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #222;
+}
+.player-current-score {
+    font-size: 30px;
+}
+
+/*--------------------------------*/
+/* Buttons */
+/*--------------------------------*/
+button {
+    position: absolute;
+    width: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    background: none;
+    border: none;
+    font-family: Lato;
+    font-size: 25px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 300;
+    transition: background-color 0.3s, color 0.3s;
+}
+button:hover {
+    font-weight: 600;
+}
+button:hover i {
+    margin-right: 20px;
+}
+button:focus {
+    outline: none;
+}
+.btn-new {
+    top: 45px;
+    left: 12%;
+}
+.btn-reset {
+    top: 45px;
+    left: 87%;
+}
+.btn-roll {
+    top: 403px;
+}
+.btn-hold {
+    top: 467px;
+}
+
+/*--------------------------------*/
+/* Icons */
+/*--------------------------------*/
+i {
+    color: #E91E63;
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 32px;
+    line-height: 1;
+    vertical-align: middle;
+    margin-top: -4px;
+    transition: margin 0.3s;
+}
+
+/*--------------------------------*/
+/* Dice Images */
+/*--------------------------------*/
+.dice1 {
+    position: absolute;
+    display: block;
+    left: 50%;
+    top: 178px;
+    transform: translateX(-50%);
+    height: 100px;
+    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
+}
+.dice2 {
+    position: absolute;
+    display: block;
+    left: 50%;
+    top: 178px;
+    transform: translate(-50%, 20%);
+    height: 100px;
+    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
+    margin-top: 97px;
+}
+
+/*--------------------------------*/
+/* Final Result Input */
+/*--------------------------------*/
+.input-result {
+    position: absolute;
+    top: 519px;
+    left: 406px;
+}
+.enter-score {
+    width: 200px;
+    height: 40px;
+    font-size: 25px;
+}
+.enter-score::placeholder {
+    text-align: center;
+    font-size: 25px;
+}
+.enter-score {
+    color: #E91E63;
+    outline: none;
+}
+.winner-player{
+    position: absolute;
+    margin-top: 236px;
+    margin-left: 210px;
+    font-size: 110px;
+    color: #E91E63;
+    text-transform: uppercase;
+}
+
+/*--------------------------------*/
+/* Winner Style */
+/*--------------------------------*/
+.winner{
+    background-image: url("../images/background-image/ezgif.com-resize.gif")
+}
+
